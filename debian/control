@@ -1,0 +1,36 @@
+Source: ruby-sass-rails
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               rake,
+               ruby-railties (>= 2:4.0.0),
+               ruby-sass (>= 3.1),
+               ruby-sassc-rails (>= 2.1),
+               ruby-sprockets (>= 2.8),
+               ruby-sprockets-rails (>= 2.0),
+               ruby-tilt (>= 1.1)
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-sass-rails.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-sass-rails
+Homepage: https://github.com/rails/sass-rails
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-sass-rails
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby-railties (>= 2:4.0.0),
+         ruby-sass (>= 3.1),
+         ruby-sassc-rails (>= 2.1),
+         ruby-sprockets (>= 2.8),
+         ruby-sprockets-rails (>= 2.0),
+         ruby-tilt (>= 1.1),
+         ${misc:Depends}
+Breaks: rails (<< 2:6.0~)
+Description: Sass adapter for the Rails asset pipeline
+ This package integrates Sass into the Rails asset pipeline, i.e. you can write
+ stylesheets using Sass and have them compiled into CSS before being sent to
+ the clients.

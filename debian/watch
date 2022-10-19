@@ -1,0 +1,3 @@
+version=3
+opts=uversionmangle=s/.beta/~beta/ \
+https://github.com/rails/sass-rails/releases .*/v(.*).tar.gz
